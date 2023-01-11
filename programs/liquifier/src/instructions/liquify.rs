@@ -142,7 +142,7 @@ pub fn handler(ctx: Context<Liquify>) -> Result<()>{
     let mint_to_be_liquified_metadata_data = ctx.accounts.mint_to_be_liquified_metadata.try_borrow_mut_data().expect("Failed to borrow data");
     let mint_to_be_liquified_metadata = Metadata::deserialize(&mut mint_to_be_liquified_metadata_data.as_ref()).expect("Failed to deserialize metadata");
     if mint_to_be_liquified_metadata.mint != ctx.accounts.mint_to_be_liquified.key() {
-        return Err(error!(LiquifierError::InvalidMintMetadata));
+        return Err(error!(LiquifierError::InvalidMintToBeLiquifiedMetadata));
     }
 
     if !mint_to_be_liquified_metadata.collection.is_some() {

@@ -18,6 +18,8 @@ pub enum LiquifierError {
     InvalidMintMetadataOwner,
     #[msg("Invalid Collection Mint Metadata")]
     InvalidCollectionMintMetadata,
+    #[msg("Invalid Mint TO Be Liquified Metadata")]
+    InvalidMintToBeLiquifiedMetadata,
     #[msg("No Collection Defined in Metadata")]
     NoCollectionDefined,
     #[msg("Unverified Collection in Metadata")]

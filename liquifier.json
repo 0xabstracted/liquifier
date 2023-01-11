@@ -1,0 +1,484 @@
+{
+  "version": "0.1.0",
+  "name": "liquifier",
+  "instructions": [
+    {
+      "name": "createLiquifier",
+      "accounts": [
+        {
+          "name": "liquifier",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "admin",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "liquifierTreasuryTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierTokenMint",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierCollectionMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierCollectionMintMetadata",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenMetadataProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedToken",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "ix",
+          "type": {
+            "defined": "CreateLiquifierArgs"
+          }
+        }
+      ]
+    },
+    {
+      "name": "turnonLiquifier",
+      "accounts": [
+        {
+          "name": "liquifier",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierTreasuryTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "admin",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "liquifierTokenMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierCollectionMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierTokenMintMetadata",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierCollectionMintMetadata",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenMetadataProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "ix",
+          "type": {
+            "defined": "TurnonLiquifierArgs"
+          }
+        }
+      ]
+    },
+    {
+      "name": "liquify",
+      "accounts": [
+        {
+          "name": "liquifier",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierTreasuryTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "liquifierTokenMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierCollectionMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierTokenMintMetadata",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierCollectionMintMetadata",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "mintToBeLiquified",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "mintToBeLiquifiedUserAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "mintToBeLiquifiedLiquifierAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "mintToBeLiquifiedMetadata",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenMetadataProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedToken",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "deliquify",
+      "accounts": [
+        {
+          "name": "liquifier",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierTreasuryTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "liquifierTokenMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "liquifierCollectionMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "mintToBeDeliquified",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "mintToBeDeliquifiedUserAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "mintToBeDeliquifiedLiquifierAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "mintToBeDeliquifiedMetadata",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenMetadataProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedToken",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Liquifier",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "liquifierId",
+            "type": "publicKey"
+          },
+          {
+            "name": "maxTokensLiquified",
+            "type": "u128"
+          },
+          {
+            "name": "liquifierTreasuryTokenAmount",
+            "type": "u128"
+          },
+          {
+            "name": "collectionSize",
+            "type": "u64"
+          },
+          {
+            "name": "liquifiedNftsCount",
+            "type": "u64"
+          },
+          {
+            "name": "liquificationThreshold",
+            "type": "u64"
+          },
+          {
+            "name": "liquifierTokenMint",
+            "type": "publicKey"
+          },
+          {
+            "name": "liquifierTreasuryTokenAccount",
+            "type": "publicKey"
+          },
+          {
+            "name": "liquifierCollectionMint",
+            "type": "publicKey"
+          }
+        ]
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "CreateLiquifierArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "decimals",
+            "type": "u8"
+          },
+          {
+            "name": "collectionSize",
+            "type": "u64"
+          },
+          {
+            "name": "liquificationThreshold",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TurnonLiquifierArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "symbol",
+            "type": "string"
+          },
+          {
+            "name": "uri",
+            "type": "string"
+          },
+          {
+            "name": "collectionSize",
+            "type": "u64"
+          },
+          {
+            "name": "liquificationThreshold",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "InvalidParamsForCollection",
+      "msg": "Invalid parameters for Collection"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidLiquifierTreasuryTokenAccountOwner",
+      "msg": "Invalid Liquifier Treasury TokenAccount Owner"
+    },
+    {
+      "code": 6002,
+      "name": "InvalidLiquifierTokenMint",
+      "msg": "Invalid Liquifier Token Mint"
+    },
+    {
+      "code": 6003,
+      "name": "InvalidMintToBeLiquified",
+      "msg": "Invalid Mint To Be Liquified"
+    },
+    {
+      "code": 6004,
+      "name": "InvalidUserLiquifierTokenAccountOwner",
+      "msg": "Invalid User Liquifier TokenAccount Owner"
+    },
+    {
+      "code": 6005,
+      "name": "EmptyMetadataAccount",
+      "msg": "Empty Metadta Account"
+    },
+    {
+      "code": 6006,
+      "name": "InvalidMintMetadataOwner",
+      "msg": "Invalid Mint Metadata Owner"
+    },
+    {
+      "code": 6007,
+      "name": "InvalidCollectionMintMetadata",
+      "msg": "Invalid Collection Mint Metadata"
+    },
+    {
+      "code": 6008,
+      "name": "InvalidMintToBeLiquifiedMetadata",
+      "msg": "Invalid Mint TO Be Liquified Metadata"
+    },
+    {
+      "code": 6009,
+      "name": "NoCollectionDefined",
+      "msg": "No Collection Defined in Metadata"
+    },
+    {
+      "code": 6010,
+      "name": "UnverifiedCollection",
+      "msg": "Unverified Collection in Metadata"
+    },
+    {
+      "code": 6011,
+      "name": "InvalidCollectionMint",
+      "msg": "Invalid Collection Mint in Metadata"
+    },
+    {
+      "code": 6012,
+      "name": "InvalidLiquifierTreasuryTokenAccountAddress",
+      "msg": "Invalid Liquifier Treasury TokenAccount Address"
+    }
+  ],
+  "metadata": {
+    "address": "LQU1Teo79ekWeqz6W8hcbjRRzhSrbarqhfNsgWEDe1g"
+  }
+}
