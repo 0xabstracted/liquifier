@@ -1,0 +1,27 @@
+[package]
+name = "one_o_one"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "one_o_one"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[profile.release]
+overflow-checks = true
+
+[dependencies]
+anchor-lang = { version = "0.24.2", features = ["init-if-needed"] }
+anchor-spl = "0.24.2"
+solana-program = "1.9.29"
+spl-token = { version = "3.1.1", features = ["no-entrypoint"] }
+mpl-token-metadata = { version = "1.3.3", features = ["no-entrypoint"] }
+spl-associated-token-account = { version = "1.0.3", features = ["no-entrypoint"] }
