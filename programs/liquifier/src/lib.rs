@@ -7,7 +7,7 @@ pub mod error;
 pub use instructions::*;
 pub use state::*;
 
-declare_id!("LQU1Teo79ekWeqz6W8hcbjRRzhSrbarqhfNsgWEDe1g");
+declare_id!("4gHkd41joA4RyNuFY9UYYUbsBwAgjTomRoZFJjLwd5ht");
 
 #[program]
 pub mod liquifier {

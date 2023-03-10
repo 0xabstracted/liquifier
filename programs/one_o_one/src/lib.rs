@@ -7,7 +7,7 @@ pub mod error;
 pub use instructions::*;
 pub use state::*;
 
-declare_id!("ooou9iMYreTDSFrzEEJYSNHdHDfMaX1MA5D2zQnDQTo");
+declare_id!("GaTmPSkohwxmaK5THGQv3vms5Ernm4hYBaBDz8VCfmUp");
 
 #[program]
 pub mod one_o_one {
